@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Fernando Silva Vale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fernando Silva Vale</h1>
+        <button id="theme-toggle">Modo Escuro</button>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <img src="images/fotoperfil.jpg" alt="Foto de Fernando Silva Vale">
+            <p>Olá! Me chamo Fernando, tenho 35 anos. <br>Sou estudante de Análise e Desenvolvimento de Sistemas, com foco especial na área de dados. Atualmente moro em Fortaleza, CE. <br> Amo praticar programação, especialmente na área de dados, pois me permite visualizar o significado por trás de informações que a maioria das pessoas não consegue enxergar. <br>Meus hobbies incluem jogar videogame, nadar e correr.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" maxlength="200" required></textarea>
+                <span id="char-counter">0/200</span>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Fernando Silva Vale</p>
+        <p>
+            <a href="https://github.com/fernandosvale" target="_blank">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/fernandosilvavale/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

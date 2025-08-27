@@ -1,0 +1,178 @@
+/* 1. Reset e Layout Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Importa a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos para o modo escuro */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #222;
+}
+
+.dark-mode header a {
+    color: #ccc;
+}
+
+.dark-mode section {
+    background-color: #444;
+}
+
+.dark-mode form input, .dark-mode form textarea {
+    background-color: #555;
+    color: #fff;
+    border-color: #777;
+}
+
+.dark-mode button {
+    background-color: #666;
+    color: #fff;
+}
+
+/* 2. Header e Navegação */
+header {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffd700;
+}
+
+/* 3. Seções */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* 4. Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+form button {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #004080;
+}
+
+/* 5. Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+
+/* Estilo do botão de modo */
+#theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Estilo do contador */
+#char-counter {
+    font-size: 0.8rem;
+    color: #777;
+    text-align: right;
+}
