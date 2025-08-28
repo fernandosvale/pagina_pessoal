@@ -3,55 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Fernando Silva Vale</title>
+    <meta name="description" content="Página pessoal de Fernando Silva Vale - Desenvolvedor e estudante de Análise e Desenvolvimento de Sistemas">
+    <meta name="keywords" content="Fernando Silva Vale, desenvolvedor, programação, dados, Fortaleza">
+    <meta name="author" content="Fernando Silva Vale">
+    <title>Fernando Silva Vale - Desenvolvedor</title>
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
+    <!-- Skip to main content para acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-    <header>
-        <h1>Fernando Silva Vale</h1>
-        <button id="theme-toggle">Modo Escuro</button>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="header" role="banner">
+        <div class="header__container">
+            <h1 class="header__title">Fernando Silva Vale</h1>
+            <p class="header__subtitle">Desenvolvedor & Analista de Dados</p>
+            
+            <nav class="nav" role="navigation" aria-label="Navegação principal">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#sobre" class="nav__link">Sobre</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#habilidades" class="nav__link">Habilidades</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contato" class="nav__link">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <button 
+                id="theme-toggle" 
+                class="theme-toggle" 
+                aria-label="Alternar entre modo claro e escuro"
+                aria-pressed="false"
+            >
+                <span class="theme-toggle__icon">🌙</span>
+                <span class="theme-toggle__text">Modo Escuro</span>
+            </button>
+        </div>
     </header>
 
-    <main>
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <img src="images/fotoperfil.jpg" alt="Foto de Fernando Silva Vale">
-            <p>Olá! Me chamo Fernando, tenho 35 anos. <br>Sou estudante de Análise e Desenvolvimento de Sistemas, com foco especial na área de dados. Atualmente moro em Fortaleza, CE. <br> Amo praticar programação, especialmente na área de dados, pois me permite visualizar o significado por trás de informações que a maioria das pessoas não consegue enxergar. <br>Meus hobbies incluem jogar videogame, nadar e correr.</p>
+    <main id="main-content" class="main" role="main">
+        <section id="sobre" class="section section--hero">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero__content">
+                        <h2 class="hero__title">Sobre Mim</h2>
+                        <div class="hero__profile">
+                            <img 
+                                src="images/fotoperfil.jpg" 
+                                alt="Foto de perfil de Fernando Silva Vale" 
+                                class="hero__image"
+                                loading="lazy"
+                            >
+                            <div class="hero__text">
+                                <p class="hero__description">
+                                    Olá! Me chamo Fernando, tenho 35 anos. Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, 
+                                    com foco especial na área de dados. Atualmente moro em <strong>Fortaleza, CE</strong>.
+                                </p>
+                                <p class="hero__description">
+                                    Amo praticar programação, especialmente na área de dados, pois me permite visualizar o significado 
+                                    por trás de informações que a maioria das pessoas não consegue enxergar.
+                                </p>
+                                <p class="hero__description">
+                                    Meus hobbies incluem jogar videogame, nadar e correr.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <form action="#" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+        <section id="habilidades" class="section">
+            <div class="container">
+                <h2 class="section__title">Habilidades & Tecnologias</h2>
+                <div class="skills">
+                    <div class="skill-card">
+                        <h3 class="skill-card__title">Desenvolvimento Web</h3>
+                        <ul class="skill-card__list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 class="skill-card__title">Análise de Dados</h3>
+                        <ul class="skill-card__list">
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Visualização de Dados</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 class="skill-card__title">Ferramentas</h3>
+                        <ul class="skill-card__list">
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>Jupyter Notebook</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        <section id="contato" class="section">
+            <div class="container">
+                <h2 class="section__title">Entre em Contato</h2>
+                <div class="contact">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">Vamos conversar!</h3>
+                        <p class="contact__description">
+                            Estou sempre aberto a novas oportunidades e colaborações. 
+                            Sinta-se à vontade para entrar em contato!
+                        </p>
+                        <div class="contact__social">
+                            <a href="https://github.com/fernandosvale" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="contact__social-link"
+                               aria-label="Visitar perfil do GitHub">
+                                <span class="contact__social-icon">📱</span>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/fernandosilvavale/" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="contact__social-link"
+                               aria-label="Visitar perfil do LinkedIn">
+                                <span class="contact__social-icon">💼</span>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" action="#" method="POST" novalidate>
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome completo *</label>
+                            <input 
+                                type="text" 
+                                id="nome" 
+                                name="nome" 
+                                class="form-input"
+                                required 
+                                aria-describedby="nome-error"
+                                autocomplete="name"
+                            >
+                            <div id="nome-error" class="form-error" role="alert" aria-live="polite"></div>
+                        </div>
 
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" maxlength="200" required></textarea>
-                <span id="char-counter">0/200</span>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input"
+                                required 
+                                aria-describedby="email-error"
+                                autocomplete="email"
+                            >
+                            <div id="email-error" class="form-error" role="alert" aria-live="polite"></div>
+                        </div>
 
-                <button type="submit">Enviar Mensagem</button>
-            </form>
+                        <div class="form-group">
+                            <label for="mensagem" class="form-label">Mensagem *</label>
+                            <textarea 
+                                id="mensagem" 
+                                name="mensagem" 
+                                rows="5" 
+                                maxlength="500" 
+                                class="form-textarea"
+                                required 
+                                aria-describedby="mensagem-error mensagem-counter"
+                                placeholder="Digite sua mensagem aqui..."
+                            ></textarea>
+                            <div class="form-footer">
+                                <div id="mensagem-counter" class="form-counter">0/500</div>
+                                <div id="mensagem-error" class="form-error" role="alert" aria-live="polite"></div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="form-submit">
+                            <span class="form-submit__text">Enviar Mensagem</span>
+                            <span class="form-submit__icon">📤</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 - Fernando Silva Vale</p>
-        <p>
-            <a href="https://github.com/fernandosvale" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/fernandosilvavale/" target="_blank">LinkedIn</a>
-        </p>
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2024 Fernando Silva Vale. Todos os direitos reservados.</p>
+                <p class="footer__made-with">
+                    Feito com ❤️ em Fortaleza, CE
+                </p>
+            </div>
+        </div>
     </footer>
     
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
